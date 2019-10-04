@@ -21,15 +21,6 @@ function* addToCart({ id }) {
     };
     yield put(addToCartSuccess(data));
   }
-  // const productIndex = draft.findIndex(p => p.id === action.product.id);
-  // if (productIndex >= 0) {
-  //   draft[productIndex].amount += 1;
-  // } else {
-  //   draft.push({
-  //     ...action.product,
-  //     amount: 1,
-  //   });
-  // }
 }
 
 export default all([takeLatest('@cart/ADD_REQUEST', addToCart)]);
